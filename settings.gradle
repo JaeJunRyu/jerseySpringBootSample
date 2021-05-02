@@ -1,0 +1,10 @@
+rootProject.name = 'jersey-SpringBoot-Sample'
+include 'jerseyJPATest'
+include 'jerseyControllerTest'
+include 'jerseyServiceTest'
+include 'jerseyAOPTest'
+include 'jerseyFilterTest'
+include 'jerseyInterceptorTest'
+include 'jerseyExceptionTest'
+include 'jerseySecurityTest'
+
