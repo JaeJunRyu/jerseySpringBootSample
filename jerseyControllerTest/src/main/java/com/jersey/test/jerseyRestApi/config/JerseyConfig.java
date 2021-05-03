@@ -1,6 +1,6 @@
 package com.jersey.test.jerseyRestApi.config;
 
-import com.jersey.test.jerseyRestApi.controller.HelloController;
+import com.jersey.test.jerseyRestApi.config.controller.ControllerRegistration;
 import org.glassfish.jersey.server.ResourceConfig;
 import org.springframework.stereotype.Component;
 
@@ -8,6 +8,13 @@ import org.springframework.stereotype.Component;
 public class JerseyConfig extends ResourceConfig {
 
     public JerseyConfig() {
-        register(HelloController.class);
+//        register(HelloController.class);
+        registerEndpoints();
     }
+
+
+    private void registerEndpoints(){
+        ControllerRegistration.HELLO_CONTROLLERS.forEach(c -> register(c));
+    }
+
 }
